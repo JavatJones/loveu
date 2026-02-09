@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 const montse = Montserrat({
   variable: "--font-montserrat",
-  subsets: ["latin"],
+  subsets: ["vietnamese"],
 });
 export const metadata: Metadata = {
   title: "Karen ❤️",
-  description: "Te amo mucho cariño",
+  description: "Te amo mucho bebe <3",
 };
 
 export default function RootLayout({
