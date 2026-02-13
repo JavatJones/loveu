@@ -17,6 +17,7 @@ import { StaticImageData } from "next/image";
 interface Surprise {
   id: number;
   text: string;
+  text2: string;
   img: StaticImageData; // O StaticImageData si usas Next.js optimizado
 }
 
@@ -24,31 +25,37 @@ const texts: Surprise[] = [
   {
     id: 1,
     text: "Eres lo más bonito de mi vida ❤️",
+    text2: "Te amo cariño ❤️",
     img: id1
   },
   {
     id: 2,
     text: "Te amo mas de lo que imaginas, adoro ser tu novio! 😍",
+    text2: "Te amo bebe ❤️",
     img: id2
   },
   {
     id: 3,
-    text: "Amo tus besos y tu cariño miamor 🌹",
+    text: "Amo tu cariño y tus besos miamor 🌹",
+    text2: "Te amo mi nina ❤️",
     img: id3
   },
   {
     id: 4,
     text: "Adoro pasar tiempo contigo ❤️",
+    text2: "Te amo preciosa ❤️",
     img: id1
   },
   {
     id: 5,
     text: "Mi preciosa Nina, te amo mucho! 😍",
+    text2: "Te amo bebe ❤️",
     img: id2
   },
   {
     id: 6,
     text: "Bebesita hermosa, preciosa, eres muy importante para mi 🌹",
+    text2: "Mi princesa, te amo ❤️",
     img: id3
   },
 ];
@@ -128,19 +135,19 @@ const IloveUHomepage = () => {
       <section ref={sectionRef} className="container mx-auto max-w-xl min-h-[400px] relative flex flex-col p-16 bg-slate-100 border border-red-500 shadow-[0_0_50px_rgba(239,68,68,0.3)] rounded-2xl">
         <img
           src={Nosotros.src}
-          className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-full absolute -top-32 left-1/2 -translate-x-1/2 border-4 border-red-500 shadow-xl z-10"
+          className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-full absolute -top-14 lg:-top-32 left-1/2 -translate-x-1/2 border drop-shadow-red-500 drop-shadow-lg border-red-500 shadow-xl z-10"
           alt="Nosotros"
         />
 
         <article className="mt-12 mb-10 text-center flex flex-col gap-5">
-          <h1 className="text-black text-3xl font-medium italic">Feliz san valentin cariño</h1>
-          <span className="text-black text-xl font-normal">
+          <h1 className="text-black text-3xl font-medium italic">Feliz san valentin cariño ❤️</h1>
+          <span className="text-black text-xl font-bold">
             Te amo mucho bb
           </span>
-          <span className="text-black text-xl font-normal">
-            Te tengo una pregunta :)
+          <span className="text-black text-lg font-normal">
+            Tengo una pregunta para ti...
           </span>
-          <span className="text-black text-xl font-normal">
+          <span className="text-black text-3xl font-normal">
             Me querí?
           </span>
         </article>
@@ -191,9 +198,12 @@ const IloveUHomepage = () => {
             <div className="absolute bottom-3 -right-6 bg-red-500 p-3 rounded-full animate-pulse">❤️</div>
           </div>
 
-          <h2 className="text-4xl text-white font-black drop-shadow-lg mb-8 uppercase tracking-tighter">
+          <h2 className="text-3xl lg:text-4xl text-white font-black drop-shadow-lg mb-8 uppercase tracking-tighter">
             {currentSurprise.text}
           </h2>
+          <span className="text-xl lg:text-2xl text-white font-black drop-shadow-lg mb-8 uppercase tracking-tighter">
+            {currentSurprise.text2}
+          </span>
 
           <button
             onClick={() => setHappy(false)}
